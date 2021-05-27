@@ -1,0 +1,24 @@
+{% extends "index.html" %}
+{% block title %}Create an Account{% endblock %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+    <div class="container">
+        <h1>Upload the Video here:</h1>
+        <form>
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="customFile" accept="video/*, video/x-matroska">
+                <label class="custom-file-label" for="customFile">Choose file</label>
+              </div>
+            <button class="btn btn-primary">Upload</button>
+        </form>
+    </div>
+
+    <script>
+        $('#customFile').change(function(e){
+            var dataName = e.target.files[0].name;
+            $('.custom-file-label').text(dataName);
+        });
+    </script>
+{% endblock %}

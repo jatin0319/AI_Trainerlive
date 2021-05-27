@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>AI trainer</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'boot/css/bootstrap.min.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static 'boot/js/bootstrap.min.js' %}"></script>
+    <style>
+        .caption-va .carousel-caption {
+            position: absolute;
+            top: 0;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-align: center;
+            -moz-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            height: 100%;
+        }
+        a > button{
+            margin: 10px;
+        }
+        h1{
+            color: cyan;
+        }
+    </style>
+</head>
+
+<body>
+
+    {% include '../components/navbar.html' %}
+
+    <div id="demo" class="carousel slide caption-va" data-ride="carousel">
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'images/img1.jpg' %}" alt="image 1" height="860px">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'images/img2.jpg' %}" alt="image 2" height="860px">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'images/img3.jpg' %}" alt="image 3" height="860px">
+            </div>
+        </div>
+
+        <div class="carousel-caption">
+            <h1>Success usually comes to those who are too busy to be looking for it.</h1>
+            <a href="/video"><button type="button" class="btn btn-primary">HandCurl Exercise</button></a>
+            <a href="/uploadVideo"><button type="button" class="btn btn-primary">Squat Exercise</button></a>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+
+    </div>
+
+</body>
+
+</html>

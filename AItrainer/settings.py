@@ -27,7 +27,7 @@ SECRET_KEY = '@=f&fl@rvz(5=5us$2i5v@mduaoj5lwpic2y!5)7rl+85#@yj6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["aitrainer01.herokuapp.com"]
+ALLOWED_HOSTS = ['aitrainer01.herokuapp.com','localhost']
 
 
 # Application definition

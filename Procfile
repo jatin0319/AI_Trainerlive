@@ -1,0 +1,1 @@
+web: gunicorn AItrainer.wsgi --log-file -
